@@ -17,10 +17,15 @@ This command will open the project on your browser.
 ## Information about the project
 
 This project was made using the following technologies/libraries:
+
 • Axios for server requests,
+
 • ReactJS Pagination to help the work on paginations,
+
 • React Router Dom for routing,
+
 • Styled Components for compose the components in a styled way
+
 • Jest and React Testing Library for testing
 
 The project is fully responsive (mobile-first)
