@@ -8,6 +8,7 @@ export const Content = styled.div`
     li {
       & + .active {
         background: #15095b;
+        border: 1px solid #15095b;
 
         a {
           color: #fff;
@@ -91,6 +92,7 @@ export const Content = styled.div`
 
       &:hover {
         background: #15095b90;
+        border: 1px solid #15095b90;
         a {
           color: #fff;
         }
