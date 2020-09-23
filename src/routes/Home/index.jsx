@@ -53,34 +53,35 @@ const Home = () => {
     [pagination]
   );
 
-  const handleSubmit = (evt) => {
-    evt.preventDefault();
+  const handleSubmit = useCallback(
+    (evt) => {
+      evt.preventDefault();
 
-    if (!nameSearched && !ageSearched) {
-      setUserList(originalList);
-      return;
-    }
+      if (!nameSearched && !ageSearched) {
+        setUserList(originalList);
+        return;
+      }
 
-    let usersFiltered = [];
+      let usersFiltered = [];
 
-    if (nameSearched && ageSearched) {
-      usersFiltered = originalList.filter(
-        ({ name, age }) =>
-          name.toLowerCase().includes(nameSearched.toLowerCase()) &&
-          age === +ageSearched
-      );
-    } else if (nameSearched && !ageSearched) {
-      usersFiltered = originalList.filter(({ name, age }) =>
-        name.toLowerCase().includes(nameSearched.toLowerCase())
-      );
-    } else {
-      usersFiltered = originalList.filter(
-        ({ name, age }) => age === +ageSearched
-      );
-    }
+      if (nameSearched && ageSearched) {
+        usersFiltered = originalList.filter(
+          ({ name, age }) =>
+            name.toLowerCase().includes(nameSearched.toLowerCase()) &&
+            age === +ageSearched
+        );
+      } else if (nameSearched && !ageSearched) {
+        usersFiltered = originalList.filter(({ name }) =>
+          name.toLowerCase().includes(nameSearched.toLowerCase())
+        );
+      } else {
+        usersFiltered = originalList.filter(({ age }) => age === +ageSearched);
+      }
 
-    setUserList(usersFiltered);
-  };
+      setUserList(usersFiltered);
+    },
+    [ageSearched, nameSearched, originalList]
+  );
 
   const handleAgeKeyUp = (evt) => {
     let value = evt.target.value;
