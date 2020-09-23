@@ -30,6 +30,7 @@ export const Content = styled.div`
             }
           `}
       }
+
       &:nth-child(2) {
         background: #0095ae;
         a {
@@ -45,6 +46,7 @@ export const Content = styled.div`
             }
           `}
       }
+
       &:last-child {
         background: #0095ae;
         a {
@@ -92,7 +94,7 @@ export const Content = styled.div`
 
       &:hover {
         background: #15095b90;
-        border: 1px solid #15095b90;
+
         a {
           color: #fff;
         }
