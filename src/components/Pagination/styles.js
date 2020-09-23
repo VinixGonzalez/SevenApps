@@ -8,10 +8,19 @@ export const Content = styled.div`
     li {
       & + .active {
         background: #15095b;
+
+        a {
+          color: #fff;
+        }
       }
 
+      &:nth-child(1) {
+        background: #0097b020;
+      }
+
+      border: 1px solid #0097b0;
       transition: all 0.5s ease;
-      background: #0097b0;
+      background: #fff;
       border-radius: 50%;
       width: 35px;
       height: 35px;
@@ -25,11 +34,14 @@ export const Content = styled.div`
 
       &:hover {
         background: #15095b90;
+        a {
+          color: #fff;
+        }
       }
 
       a {
         font-size: 12px;
-        color: #fff;
+        color: #0097b0;
         text-decoration: none;
       }
     }
