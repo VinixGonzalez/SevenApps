@@ -26,7 +26,7 @@ This project was made using the following technologies/libraries:
 
 • Styled Components for compose the components in a styled way
 
-• Jest and React Testing Library for testing
+• Jest and Enzyme/React Testing Library for testing
 
 The project is fully responsive (mobile-first)
 
