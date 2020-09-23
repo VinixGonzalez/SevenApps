@@ -44,7 +44,7 @@ const Home = () => {
     }
 
     getData();
-  }, [setLoading]);
+  }, []);
 
   const handlePaginate = useCallback(
     (pageNum) => {
@@ -134,12 +134,17 @@ const Home = () => {
                     {user.age}
                   </span>
                   <span>
-                    <small>born at</small> {new Date().getFullYear() - user.age}
+                    <small>born at </small>
+                    {new Date().getFullYear() - user.age}
                   </span>
                 </Card>
               ))
             ) : (
-              <div>No users found.</div>
+              <div>
+                <span role="img" aria-label="not found">
+                  No users found 🙈
+                </span>
+              </div>
             )}
           </Main>
           {currentUsers.length > 0 && (

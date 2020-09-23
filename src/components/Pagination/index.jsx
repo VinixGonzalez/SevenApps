@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useState } from "react";
+import React, { useLayoutEffect, useState, memo } from "react";
 
 import Pagination from "react-js-pagination";
 import { Content } from "./styles";
@@ -43,4 +43,4 @@ const CustomPagination = ({
   );
 };
 
-export default CustomPagination;
+export default memo(CustomPagination);
