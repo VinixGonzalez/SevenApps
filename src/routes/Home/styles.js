@@ -41,6 +41,7 @@ export const Input = styled.input`
   padding: 5px;
   border-radius: 10px;
   border: 1px solid #00000050;
+  text-align: center;
 `;
 
 export const Button = styled.button`
