@@ -26,6 +26,8 @@ const Home = () => {
   const [ageSearched, setAgeSearched] = useState("");
   const [originalList, setOriginalList] = useState([]);
 
+  const [currentUsers, setCurrentUsers] = useState([]);
+
   useEffect(() => {
     async function getData() {
       setLoading(true);
@@ -92,10 +94,12 @@ const Home = () => {
 
   const { currentPage, usersPerPage } = pagination;
 
-  let currentUsers = [];
-  const indexOfLastUsers = currentPage * usersPerPage;
-  const indexOfFirstUsers = indexOfLastUsers - usersPerPage;
-  currentUsers = userList.slice(indexOfFirstUsers, indexOfLastUsers);
+  useEffect(() => {
+    const indexOfLastUsers = currentPage * usersPerPage;
+    const indexOfFirstUsers = indexOfLastUsers - usersPerPage;
+    const current = userList.slice(indexOfFirstUsers, indexOfLastUsers);
+    setCurrentUsers(current);
+  }, [currentPage, usersPerPage, userList]);
 
   return (
     <Content data-testid="homeContent">
