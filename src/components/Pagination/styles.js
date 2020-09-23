@@ -17,6 +17,15 @@ export const Content = styled.div`
       &:nth-child(1) {
         background: #0097b020;
       }
+      &:nth-child(2) {
+        background: #0097b020;
+      }
+      &:last-child {
+        background: #0097b020;
+      }
+      &:nth-last-child(2) {
+        background: #0097b020;
+      }
 
       border: 1px solid #0097b0;
       transition: all 0.5s ease;
