@@ -16,14 +16,24 @@ export const Main = styled.main`
 `;
 
 export const Form = styled.form`
+  margin-top: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+
+  @media (max-width: 463px) {
+    flex-direction: column;
+    align-items: unset;
+  }
 `;
 
 export const FormGroup = styled.div`
-  margin: 20px 5px;
+  margin-right: 10px;
+
+  @media (max-width: 463px) {
+    margin: 0 0 10px 0;
+  }
 `;
 
 export const Input = styled.input`
@@ -35,7 +45,6 @@ export const Input = styled.input`
 
 export const Button = styled.button`
   height: 40px;
-  margin-left: 10px;
   padding: 5px 20px;
   border-radius: 10px;
   border: 1px solid #00000050;
