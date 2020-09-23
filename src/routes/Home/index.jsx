@@ -92,9 +92,10 @@ const Home = () => {
 
   const { currentPage, usersPerPage } = pagination;
 
+  let currentUsers = [];
   const indexOfLastUsers = currentPage * usersPerPage;
   const indexOfFirstUsers = indexOfLastUsers - usersPerPage;
-  const currentUsers = userList.slice(indexOfFirstUsers, indexOfLastUsers);
+  currentUsers = userList.slice(indexOfFirstUsers, indexOfLastUsers);
 
   return (
     <Content data-testid="homeContent">
