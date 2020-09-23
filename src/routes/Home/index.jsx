@@ -21,7 +21,7 @@ const Home = () => {
     currentPage: 1,
     usersPerPage: 20,
   });
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [nameSearched, setNameSearched] = useState("");
   const [ageSearched, setAgeSearched] = useState("");
   const [originalList, setOriginalList] = useState([]);
