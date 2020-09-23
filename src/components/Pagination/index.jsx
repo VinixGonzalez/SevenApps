@@ -31,7 +31,7 @@ const CustomPagination = ({
   }
 
   return (
-    <Content>
+    <Content currentPage={currentPage} lastPage={pageNumbers.length}>
       <Pagination
         activePage={currentPage || 1}
         itemsCountPerPage={usersPerPage}

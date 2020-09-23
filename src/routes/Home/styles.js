@@ -67,6 +67,7 @@ export const Loading = styled.div`
 `;
 
 export const Card = styled.div`
+  background: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;

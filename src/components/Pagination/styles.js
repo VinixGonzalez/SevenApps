@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Content = styled.div`
   .pagination {
@@ -15,16 +15,64 @@ export const Content = styled.div`
       }
 
       &:nth-child(1) {
-        background: #0097b020;
+        background: #0095ae;
+        a {
+          color: #fff;
+        }
+        ${(props) =>
+          props.currentPage === 1 &&
+          css`
+            border: 1px solid #aeaeae;
+            background: #aeaeae;
+            &:hover {
+              background: #aeaeae;
+            }
+          `}
       }
       &:nth-child(2) {
-        background: #0097b020;
+        background: #0095ae;
+        a {
+          color: #fff;
+        }
+        ${(props) =>
+          props.currentPage === 1 &&
+          css`
+            border: 1px solid #aeaeae;
+            background: #aeaeae;
+            &:hover {
+              background: #aeaeae;
+            }
+          `}
       }
       &:last-child {
-        background: #0097b020;
+        background: #0095ae;
+        a {
+          color: #fff;
+        }
+        ${(props) =>
+          props.currentPage === props.lastPage &&
+          css`
+            border: 1px solid #aeaeae;
+            background: #aeaeae;
+            &:hover {
+              background: #aeaeae;
+            }
+          `}
       }
       &:nth-last-child(2) {
-        background: #0097b020;
+        background: #0095ae;
+        a {
+          color: #fff;
+        }
+        ${(props) =>
+          props.currentPage === props.lastPage &&
+          css`
+            border: 1px solid #aeaeae;
+            background: #aeaeae;
+            &:hover {
+              background: #aeaeae;
+            }
+          `}
       }
 
       border: 1px solid #0097b0;

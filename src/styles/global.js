@@ -15,6 +15,7 @@ ul {
 
 body {
   -webkit-font-smoothing: antialiased;
+  background: #eeeff2;
 }
 
 button,
