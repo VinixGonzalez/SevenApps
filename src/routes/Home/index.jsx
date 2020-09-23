@@ -96,7 +96,7 @@ const Home = () => {
   const currentUsers = userList.slice(indexOfFirstUsers, indexOfLastUsers);
 
   return (
-    <Content>
+    <Content data-testid="homeContent">
       <Logo src={SevenAppsLogo} alt="logo" title="❤" />
       <h1>SevenApps - User Search</h1>
 
@@ -105,6 +105,7 @@ const Home = () => {
           <Form onSubmit={handleSubmit}>
             <FormGroup>
               <Input
+                id="name"
                 placeholder="Name"
                 name="name"
                 onChange={(evt) => setNameSearched(evt.target.value)}
@@ -113,6 +114,7 @@ const Home = () => {
             </FormGroup>
             <FormGroup>
               <Input
+                id="age"
                 placeholder="Age"
                 name="age"
                 onChange={(evt) => setAgeSearched(evt.target.value)}
@@ -127,7 +129,7 @@ const Home = () => {
           <Main>
             {currentUsers.length > 0 ? (
               currentUsers.map((user, index) => (
-                <Card key={index}>
+                <Card data-testid="userCard" key={index}>
                   <h3>{user.name}</h3>
                   <span>
                     <small>age - </small>
