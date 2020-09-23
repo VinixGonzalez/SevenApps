@@ -9,10 +9,10 @@ import {
   Input,
   Button,
   Loading,
+  Card,
 } from "./styles";
 import SevenAppsLogo from "../../assets/sevenAppsLogo.png";
 import Pagination from "../../components/Pagination";
-import Card from "../../components/Card";
 import API from "../../services";
 
 const Home = () => {
@@ -158,7 +158,7 @@ const Home = () => {
         </>
       ) : (
         <Loading>
-          <h3>Loading...</h3>
+          <h3>Loading... </h3>
         </Loading>
       )}
     </Content>

@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render the pagination given the props 1`] = `
+<styled.footer>
+  <span
+    aria-label="smile"
+    role="img"
+  >
+    made by Vinícius Gonzalez 🤓 - 2020
+  </span>
+</styled.footer>
+`;
