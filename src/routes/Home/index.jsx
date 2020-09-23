@@ -99,7 +99,8 @@ const Home = () => {
   return (
     <Content data-testid="homeContent">
       <Logo src={SevenAppsLogo} alt="logo" title="❤" />
-      <h1>SevenApps - User Search</h1>
+      <h1>SevenApps</h1>
+      <h3>User Search</h3>
 
       {!loading ? (
         <>
